@@ -38,9 +38,9 @@ public class Evento {
 	//Metodo para excluir evento
 	public void excluir_evento(double preco, int[] data, String local, String nome,String autor){
 		this.preco = 0;
-		this.local = "";
-		this.nome = "";
-		this.autor = "";
+		this.local = null;
+		this.nome = null;
+		this.autor = null;
 		this.data[0] = 00;	//dia
 		this.data[1] = 00;	//mes
 		this.data[2] = 0000;	//ano
