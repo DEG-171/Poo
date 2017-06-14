@@ -148,6 +148,23 @@ public class InteracaoUsuario {
 				"4-Alterar preco do evento\n" +
 				"5-Alterar autor do evento\n" +
 				"6-Voltar ao menu anterior\n");
+			switch (opcao_evento) {
+			case 1:
+				criar_evento();
+				break;
+			case 2:
+				editar_evento();
+				break;
+			case 3:
+				excluir_evento();
+				break;
+			case 4:
+				consultar_evento();
+				break;
+			case 5:
+				mainMenu();
+				break;
+			}
 			}
 		}
 	}
