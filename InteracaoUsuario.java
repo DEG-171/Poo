@@ -40,7 +40,7 @@ public class InteracaoUsuario {
 		}
 	}
 
-	public void menu_evento();
+	public void menu_evento()
 
 	{
 		int opcao_evento = 0;
