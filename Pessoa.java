@@ -4,7 +4,14 @@ public class Pessoa {
 	int cpf;
 	int idade;
 	Evento[] eventosComparecer;
-	
+
+	// Cadastrar nova pessoa
+	public Pessoa(int cpf, String nome, int idade) {
+		this.nome = nome;
+		this.cpf = cpf;
+		this.idade = idade;
+
+	}
 
 	// Getters and Setters
 	public String getNome() {
