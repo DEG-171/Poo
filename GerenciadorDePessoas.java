@@ -1,19 +1,21 @@
 
 public class GerenciadorDePessoa {
-	Pessoa[] pessoas;
-
-	// Cadastrar nova pessoa
-	public void cadastrar_pessoa(int cpf, String nome, int idade) {
-		this.nome = nome;
-		this.cpf = cpf;
-		this.idade = idade;
-
+	int numMaxDePessoas = 20;
+	Pessoa[] pessoas = new Pessoa[numMaxDePessoas];
+	
+	public void cadastrar_pessoa(Pessoa pessoas){
+		for (int i = 0; i < numMaxDePessoas; i++) {
+			if (pessoas[i].eventos_iguais(pessoas)) {
+				return;
+			}
+		}
+		for (int j = 0; j < numMaxDePessoas; j++) {
+			if (pessoas[j].getNome() == null) {
+				pessoas[j] = pessoas;
+				return;
+			}
+		}
 	}
 
-	// Deletar cadastro de pessoa
-	public void excluir_pessoa(int cpf, String nome, int idade) {
-		this.nome = "";
-		this.cpf = 0;
-		this.idade = 0;
-	}
+
 }
