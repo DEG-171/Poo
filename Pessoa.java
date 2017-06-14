@@ -30,6 +30,13 @@ public class Pessoa {
 		}
 	}
 
+	public boolean pessoas_iguais(Pessoa pessoa){
+		if(this.cpf==pessoa.cpf){
+			return true;
+		}
+		return false;
+	}
+	
 	// Getters and Setters
 	public String getNome() {
 		return nome;
