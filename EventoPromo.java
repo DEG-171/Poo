@@ -8,6 +8,7 @@ public class EventoPromo extends Evento {
     public EventoPromo(double preco, int[] data, String local, String nome,String autor,String codigoPromocao,double desconto) {
         super(preco,data, local,nome,autor);
         this.desconto = desconto;
+        this.codigoPromocao = codigoPromocao;
     }
  
     // Getter and Setters
