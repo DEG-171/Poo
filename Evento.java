@@ -20,6 +20,20 @@ public class Evento {
 		this.data[1] = data[1];
 		this.data[2] = data[2];
 	}
+	public boolean eventos_iguais(Evento evento){
+		if(
+		(this.nome.equals(evento.nome))&&
+		(this.local.equals(evento.local))&&
+		(this.autor.equals(evento.autor))&&
+		(this.preco == evento.preco)&&
+		(this.data.equals(evento.data))
+		) {
+			return true;
+		else{
+			return false;
+			}
+		}
+	}
 	
 	//Getters and Setters
 	public double getPreco() {
