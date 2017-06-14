@@ -4,17 +4,8 @@ public class Pessoa {
 	int cpf;
 	int idade;
 	Evento[] eventosComparecer;
-	private Evento[] eventos_comparecer;
 	
-	// Construtor
-	public Pessoa(int cpf, int idade,String nome) {
 
-		this.nome = nome;
-		this.cpf = cpf;
-		this.idade = idade;
-	}
-
-	
 	// Getters and Setters
 	public String getNome() {
 		return nome;
@@ -23,6 +14,7 @@ public class Pessoa {
 	public void setNome(String novonome) {
 		this.nome = novonome;
 	}
+
 
 	public int getIdade() {
 		return idade;
