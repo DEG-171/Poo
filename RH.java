@@ -9,6 +9,27 @@ public class RH {
 		pessoasRegistradas = 0;
 
 	}
+	
+	public Pessoa consultarPessoa(int cpf){
+		for (int i = 0; i < pessoas.length; i++) {
+			if(pessoas[i].getCpf()==cpf){
+				return pessoas[i];
+			}
+		}
+		return null;
+	}
+	
+	public void excluirPessoa(int cpf){
+		for (int i = 0; i < pessoas.length; i++) {
+			if(pessoas[i].getCpf()==cpf){
+				pessoas[i]=null;
+				for(int j = i; j<pessoasRegistradas-i; j++){
+					pessoas[j]=pessoas[j+1];
+				}
+				break;
+			}
+		}
+	}
 
 	public void resgistrarPessoa(String nome, int cpf, int idade, int numEventos) {
 		if (pessoasRegistradas < pessoas.length) {
@@ -35,7 +56,7 @@ public class RH {
 		int total = 0;
 		for (Pessoa p : pessoas) {
 			for (int i = 0; i < p.getEventosRegistrados(); i++) {
-				if (p.getEventos()[i].equal(data)) {
+				if (p.getEventos()[i].equals(data)) {
 					total++;
 					break;
 				}
