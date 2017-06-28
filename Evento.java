@@ -3,15 +3,15 @@ public class Evento {
 
 	private String nome;
 	private String autor;
-	private int preço;
+	private int preco;
 	private int[] data = new int[3];
 	private String local;
 
-	public Evento(String nome, String autor, int preço, int[] data, String local) {
+	public Evento(String nome, String autor, int preco, int[] data, String local) {
 		super();
 		this.nome = nome;
 		this.autor = autor;
-		this.preço = preço;
+		this.preco = preco;
 		this.data[0] = data[0];
 		this.data[1] = data[1];
 		this.data[2] = data[2];
@@ -21,7 +21,7 @@ public class Evento {
 	public void Excluir() {
 		this.nome = null;
 		this.autor = null;
-		this.preço = 0;
+		this.preco = 0;
 		this.data[0] = 00;
 		this.data[1] = 00;
 		this.data[2] = 0000;
@@ -30,13 +30,9 @@ public class Evento {
 
 	public boolean equals(Evento evento) {
 		if (this.nome.equals(evento.nome)) {
-			// System.out.print("1,");
 			if (this.autor.equals(evento.autor)) {
-				// System.out.print("2,");
-				if (this.preço == evento.preço) {
-					// System.out.print("3,");
-					if (evento.equal(this.data)) {
-						// System.out.println("4,");
+				if (this.preco == evento.preco) {
+					if (evento.equals(this.data)) {
 						if (this.local.equals(evento.local)) {
 							return true;
 						}
@@ -47,7 +43,7 @@ public class Evento {
 		return false;
 	}
 
-	public boolean equal(int[] data) {
+	public boolean equals(int[] data) {
 		boolean igualdade = true;
 		for (int i = 0; i < this.data.length; i++) {
 			if (this.data[i] != data[i]) {
@@ -73,12 +69,12 @@ public class Evento {
 		this.autor = autor;
 	}
 
-	public int getPreço() {
-		return preço;
+	public int getPreÃ§o() {
+		return preco;
 	}
 
-	public void setPreço(int preço) {
-		this.preço = preço;
+	public void setPreÃ§o(int preÃ§o) {
+		this.preco = preÃ§o;
 	}
 
 	public int[] getData() {
