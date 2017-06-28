@@ -9,6 +9,10 @@ public class Pessoa {
 	private Evento[] eventos;
 
 	public Pessoa(String nome, int cpf, int idade, int numEventos) {
+		this.nome = nome;
+		this.cpf = cpf;
+		this.idade = idade;
+
 		eventosRegistrados = 0;
 		eventos = new Evento[numEventos];
 	}
@@ -21,11 +25,6 @@ public class Pessoa {
 				}
 			}
 
-			for (int i = 0; i < eventosRegistrados; i++) {
-				if (eventos[i].equals(evento)) {
-					return false;
-				}
-			}
 			eventos[eventosRegistrados] = evento;
 			eventosRegistrados++;
 			return true;
